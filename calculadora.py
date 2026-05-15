@@ -1,26 +1,27 @@
-print("   CALCULADORA:   ")
+print("==Calculadora==")
+n1 = float(input("Digite um numero: "))
+n2 = float(input("Digite um numero: "))
 
-n1 = float(input("Digite o primeiro numero: "))
-n2 = float(input("Digite o segundo numero: "))
+print(f"1-Soma\n2-Subtração\n3-Multiplicação\n4-Divisão")
 
-print("1 - Soma")
-print("2 - Subtracao")
-print("3 - Multiplicacao")
-print("4 - Divisao")
-
-opcao = input("Escolha uma opcao: ")
+opcao = input("Digite uma opção:")
 
 if opcao == "1":
-    print(f"Resultado: {n1 + n2}")
+    print(f"{n1} + {n2}\nTotal = {n1+n2:.3f}")
 
 elif opcao == "2":
-    print(f"Resultado: {n1 - n2}")
+    print(f"{n1} - {n2}\nTotal = {n1-n2:.3f}")
 
 elif opcao == "3":
-    print(f"Resultado: {n1 * n2}")
+    print(f"{n1} X {n2}\nTotal = {n1*n2:.3f}")
 
 elif opcao == "4":
-    print(f"Resultado: {n1 / n2}")
+
+    if n2 == 0:
+        print("Não existe divisão por zero")
+
+    else:
+        print(f"{n1} / {n2}\nTotal = {n1/n2:.3f}")
 
 else:
-    print("Opcao invalida")
+    print("Opção Invalida")
